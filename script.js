@@ -7,7 +7,7 @@ const camelCaseOutput = document.querySelector('#camelcase span')
 const pascalCaseOutput = document.querySelector('#pascalcase span')
 const snakeCaseOutput = document.querySelector('#snakecase span')
 const kebabCaseOutput = document.querySelector('#kebabcase span')
-const trim = document.querySelector('#trim span')
+const trimOutput = document.querySelector('#trim span')
 
 function capitalizeString(str) {
     return str[0].toUpperCase() + str.slice(1,str.length)
@@ -32,8 +32,15 @@ function pascalCase(str) {
 }
 
 function snakeCase(str) {
-    const wordsArray = str.split(' ')
-    return wordsArray.join('_')
+    return str.replaceAll(' ', '_')
+}
+
+function kebabCase(str) {
+    return str.replaceAll(' ', '-')
+}
+
+function trimCase(str) {
+    return str.replaceAll(' ', '')
 }
 
 function updateScreen(){
@@ -42,6 +49,8 @@ function updateScreen(){
     camelCaseOutput.innerText = camelCase(input.value)
     pascalCaseOutput.innerText = pascalCase(input.value)
     snakeCaseOutput.innerText = snakeCase(input.value)
+    kebabCaseOutput.innerText = kebabCase(input.value)
+    trimOutput.innerText = trimCase(input.value)
 }
 
 updateScreen()

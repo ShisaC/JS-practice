@@ -10,8 +10,12 @@ body {
 input{
     width: 100%;
     margin-bottom: 1rem;
-    padding: 0.5rem, 1rem;
-    font-size: 1 rem;
+    padding: 4 rem;
+    font-size: 1.5 rem;
+    color: #303030;
+    border-color: #404040;
+    border-width: 0.05rem;
+    border-radius: 4px;
 }
 
 main{
@@ -27,6 +31,7 @@ margin: 0 auto;
     background-color: beige;
     position: relative;
     text-align: left;
+    border-radius: 4px;
 }
 
 .transformed-output label{
